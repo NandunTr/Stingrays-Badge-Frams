@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Frame App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Frame Your Moment</h1>
+            <p>Capture, Fame, and Keep.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="input-group">
+                    <button id="cameraBtn" class="btn secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                            </path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                        Camera
+                    </button>
+                    <label for="fileInput" class="btn secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        Upload
+                    </label>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <div class="canvas-area">
+                <canvas id="photoCanvas"></canvas>
+                <div id="placeholder" class="placeholder">
+                    <p>Select an image to start</p>
+                </div>
+            </div>
+
+            <button id="downloadBtn" class="btn primary" disabled>
+                Download Image
+            </button>
+        </main>
+
+        <footer>
+            <div class="frames-container">
+                <h3>Select Footer</h3>
+                <div class="frames-scroll" id="framesList">
+                    <!-- Frames will be injected here by JS -->
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
